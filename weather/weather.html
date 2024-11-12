@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style/weather.css">
+</head>
+<body>
+    <!-- Header section with the title, search bar, and unit toggle -->
+    <header>
+        <h1 id="city-name">Weather App</h1> <!-- City name will be dynamically updated -->
+        <input type="text" id="search-bar" placeholder="Enter city name...">
+        <button id="location-btn">Use My Location</button>
+        <button id="unit-toggle">°C</button>
+    </header>
+
+    <!-- Current weather section -->
+    <section id="current-weather">
+        <h2>Current Weather</h2>
+        <div id="weather-info">
+            <p>Loading...</p>
+        </div>
+    </section>
+
+    <!-- 5-day forecast section -->
+    <section id="forecast">
+        <h2>5-Day Forecast</h2>
+        <div id="forecast-grid" class="grid"></div>
+    </section>
+
+    <script src="script/weather.js"></script>
+</body>
+</html>

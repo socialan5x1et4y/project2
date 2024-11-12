@@ -1,0 +1,160 @@
+/* General styles for the body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text color for contrast */
+}
+
+/* Header styles with the search bar */
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #2e3b2e; /* Dark green background */
+    color: white;
+}
+
+#search-bar {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 10px;
+    background-color: #3a4e3a; /* Dark green for the search bar */
+    border: none;
+    color: white;
+    border-radius: 5px;
+}
+
+/* Grid layout for recipe cards */
+.grid {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 20px)); /* Grid with dynamic column sizes */
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Styles for recipe cards */
+.card {
+    background-color: #1e1e1e; /* Dark background for cards */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    text-align: center;
+    padding: 10px;
+    transition: transform 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content at the top */
+    min-height: 250px; /* Minimum card height */
+    width: 200px; /* Fixed card width */
+    height: 300px; /* Fixed card height */
+}
+
+/* Image styling for cards */
+.card img {
+    width: 100%;
+    height: 150px; /* Fixed height for images */
+    object-fit: cover; /* Maintain image aspect ratio */
+    border-bottom: 1px solid #333; /* Dark border below images */
+}
+
+/* Hover effect for cards */
+.card:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Text styling for card titles and descriptions */
+.card h3 {
+    font-size: 18px;
+    color: #b0b0b0; /* Light text for titles */
+    margin: 10px 0;
+}
+
+.card p {
+    color: #9e9e9e; /* Even lighter text for descriptions */
+    font-size: 14px;
+}
+
+/* Section for displaying favorite recipes */
+#favorites-section {
+    padding: 20px;
+    background-color: transparent;
+    border-radius: 0;
+}
+
+#favorites-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #b0b0b0; /* Light text for section header */
+}
+
+/* Modal styling */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#modal-content {
+    background: #1e1e1e; /* Dark background for modal */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px;
+    width: 100%;
+    overflow-y: auto;
+    max-height: 80vh;
+    color: #e0e0e0; /* Light text in modal */
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+    #search-bar {
+        width: 90%; /* Reduce search bar width */
+    }
+
+    .grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 20px)); /* Smaller cards for smaller screens */
+    }
+
+    .card {
+        width: 180px; /* Reduce card width */
+        height: 280px; /* Reduce card height */
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 15px;
+    }
+
+    .card h3 {
+        font-size: 16px; /* Reduce font size for titles */
+    }
+
+    .card p {
+        font-size: 12px; /* Reduce font size for descriptions */
+    }
+
+    .card {
+        width: 160px; /* Further reduce card width */
+        height: 240px; /* Further reduce card height */
+    }
+}

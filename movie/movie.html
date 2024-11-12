@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies App</title>
+    <link rel="stylesheet" href="styles/movie.css">
+</head>
+<body>
+    <!-- Header section with the title and search bar -->
+    <header>
+        <h1>Movies App</h1>
+        <input type="text" id="search-bar" placeholder="Search for movies...">
+        <!-- Sort options -->
+        <select id="sort-options">
+            <option value="popularity.desc">Sort by Popularity</option>
+            <option value="release_date.desc">Sort by Release Date</option>
+            <option value="vote_average.desc">Sort by Rating</option>
+        </select>
+    </header>
+
+    <!-- Grid to display movie posters -->
+    <section id="movie-grid" class="grid"></section>
+
+    <!-- Section for displaying the watchlist -->
+    <section id="watchlist-section">
+        <h2>Your Watchlist</h2>
+        <div id="watchlist-grid" class="grid"></div>
+    </section>
+
+    <!-- Modal window to display movie details -->
+    <div id="movie-modal" class="modal">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <div id="modal-content"></div>
+    </div>
+
+    <script src="script/movie.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Finder</title>
+    <link rel="stylesheet" href="styles/recipe.css">
+</head>
+<body>
+    <!-- Header section with the title and search bar -->
+    <header>
+        <h1>Recipe Finder</h1>
+        <input type="text" id="search-bar" placeholder="Search for recipes...">
+    </header>
+
+    <!-- Grid to display recipe cards -->
+    <section id="recipe-grid" class="grid"></section>
+
+    <!-- Section for displaying favorite recipes -->
+    <section id="favorites-section">
+        <h2>Your Favorite Recipes</h2>
+        <div id="favorites-grid" class="grid"></div>
+    </section>
+
+    <!-- Modal window to display detailed recipe information -->
+    <div id="recipe-modal" class="modal">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <div id="modal-content"></div>
+    </div>
+
+    <script src="script/recipe.js"></script>
+</body>
+</html>

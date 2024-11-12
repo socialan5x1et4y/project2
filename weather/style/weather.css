@@ -1,0 +1,122 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif; /* Set the font family */
+    background-color: #121212; /* Dark background for a night mode effect */
+    color: #e0e0e0; /* Light text color for contrast against dark background */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+/* Header styling */
+header {
+    text-align: center; /* Center-align header text */
+    padding: 20px; /* Add padding around the header */
+    background-color: #2e3b2e; /* Dark green background */
+    color: white; /* White text for contrast */
+}
+
+/* Search bar styling */
+#search-bar {
+    width: 80%; /* Make search bar take up 80% of the width */
+    padding: 10px; /* Add padding inside the search bar */
+    font-size: 16px; /* Set font size */
+    margin-top: 10px; /* Add space above the search bar */
+    background-color: #3a4e3a; /* Darker green background for the search bar */
+    border: none; /* Remove border */
+    color: white; /* White text color */
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Button styling */
+button {
+    background-color: #3a4e3a; /* Green background for buttons */
+    color: white; /* White text color */
+    padding: 10px 15px; /* Add padding to buttons */
+    margin-top: 10px; /* Add space above buttons */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Change cursor to a pointer on hover */
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #4b5f4b; /* Change background color when hovering */
+}
+
+/* Styling for current weather and forecast sections */
+#current-weather, #forecast {
+    padding: 20px; /* Add padding inside sections */
+    background-color: #1e1e1e; /* Dark background for sections */
+    border-radius: 8px; /* Rounded corners */
+    margin: 20px auto; /* Center sections horizontally and add space around */
+    max-width: 600px; /* Set a maximum width for sections */
+}
+
+/* Grid layout for the forecast */
+.grid {
+    display: grid; /* Use grid layout */
+    justify-content: center; /* Center grid items */
+    grid-template-columns: repeat(5, 1fr); /* Create a grid with 5 equal columns */
+    gap: 20px; /* Add space between grid items */
+}
+
+/* Styling for each forecast card */
+.card {
+    background-color: #2e3b2e; /* Dark green background for each card */
+    border-radius: 8px; /* Rounded corners for cards */
+    padding: 10px; /* Add padding inside each card */
+    text-align: center; /* Center-align text inside cards */
+}
+
+/* Styling for images in the forecast cards (weather icons) */
+.card img {
+    width: 50px; /* Set image width */
+    height: 50px; /* Set image height */
+}
+
+/* Styling for text inside the forecast cards */
+.card p {
+    margin: 5px 0; /* Add margin above and below the paragraph */
+}
+
+/* Media query for screens with width less than or equal to 768px */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr); /* Change the grid to 3 columns */
+    }
+}
+
+/* Media query for screens with width less than or equal to 480px */
+@media (max-width: 480px) {
+    header {
+        padding: 15px; /* Reduce header padding */
+    }
+    #search-bar {
+        width: 90%; /* Make the search bar take up more width */
+    }
+}
+
+/* Media query for screens with width less than or equal to 350px */
+@media (max-width: 350px) {
+    header {
+        padding: 10px; /* Reduce padding in header */
+    }
+    #search-bar {
+        width: 95%; /* Make the search bar almost full width */
+    }
+    #current-weather, #forecast {
+        padding: 10px; /* Reduce padding for smaller screens */
+        margin: 10px auto; /* Add less space around sections */
+    }
+    .grid {
+        grid-template-columns: 1fr; /* Display the grid as a single column */
+        gap: 10px; /* Reduce the gap between items */
+    }
+    .card {
+        padding: 5px; /* Reduce padding in cards */
+    }
+    .card img {
+        width: 40px; /* Reduce icon size */
+        height: 40px; /* Reduce icon size */
+    }
+}
